@@ -8,16 +8,21 @@ import java.util.*;
 public class ex04 {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
-		
-		
-		square(sc.nextLine());
+		String a=sc.nextLine();
+		String str=a.replaceAll(" ","");
+		square(str);
 	}
 	public static void square(String arr) {
-		//int data[]=new int[];
+		int data[]=new int[arr.length()];
+		int num=Integer.parseInt(arr);
+		//data從i=arr.length()-1開始排----->0       用%10 /10
+		for(int i=arr.length()-1;i>=0;i--){
+			data[i]=(int)Math.pow(num%10, 2);
+			num=num/10;
+		}
 		
-		
-		
-		
+		for(int i=0;i<arr.length();i++)
+			System.out.print(data[i]+"\t");
 		
 	}
 }
