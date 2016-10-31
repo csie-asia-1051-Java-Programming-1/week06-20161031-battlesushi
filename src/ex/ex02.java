@@ -8,23 +8,16 @@ import java.util.*;
 public class ex02 {
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
-		System.out.print(""+fun(sc.nextInt(),sc.nextInt()));
+		int m=sc.nextInt();
+		int n=sc.nextInt();
+		System.out.print(fun(m)/  ( fun(n)*fun(m-n) )	);
 	}
-	public static long fun(int m,int n){
-		int sum=1,c=0;
-		int sum2=1,sum3=1;
-		for(int i=1;i<=m;i++){
+	public static int fun(int x){
+		int sum=1;
+		for(int i=1;i<=x;i++){
 			sum=sum*i;
 		}
-		for(int i=1;i<=n;i++){
-			sum2=sum2*i;
-		}
-		for(int i=1;i<=m-n;i++){
-			sum3=sum3*i;
-		}
-		c=sum/(sum2*sum3);
-		
-		return c;
+		return sum;
 	}
 	
 	

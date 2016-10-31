@@ -12,8 +12,8 @@ public class ex04 {
 		
 		square(sc.nextLine());
 	}
-	public static void square( arr) {
-		int data[]=new int[arr.length];
+	public static void square(String arr) {
+		//int data[]=new int[];
 		
 		
 		
